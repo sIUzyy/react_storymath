@@ -35,15 +35,15 @@ const headers = [
   },
   {
     name: "About Us",
-    path: "/",
+    path: "/aboutus",
   },
   {
     name: "Sustainable Practices",
-    path: "/",
+    path: "/maintenance",
   },
   {
     name: "Technology Integration",
-    path: "/",
+    path: "/maintenance",
   },
 ];
 
@@ -59,7 +59,7 @@ export default function Footer() {
             </h1>
           </div>
 
-          <div className="links_container flex flex-col text-center text-[14px] lg:flex-row xl:text-[18px] ">
+          <div className="links_container flex flex-col text-center text-[14px] lg:flex-row  ">
             {headers.map((header, key) => (
               <Link
                 className="mb-3 hover:text-[#008C7A] lg:mb-0 lg:mr-5 "
@@ -86,7 +86,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="management px-4 mt-16">
+        <div className="management px-4 mt-16 font-light">
           <div>
             <h1 className="text-center text-[14px] ">
               © {year} StoryMath. All rights reserved. Empowering children
@@ -95,10 +95,12 @@ export default function Footer() {
           </div>
 
           <div className="text-center flex flex-col text-[14px] mt-10 lg:flex-row lg:justify-center ">
-            <Link className="hover:text-[#008C7A] lg:mx-2 ">
+            <Link to="/maintenance" className="hover:text-[#008C7A] lg:mx-2 ">
               Terms of Service
             </Link>
-            <Link className="hover:text-[#008C7A] lg:mx-2">Privacy Policy</Link>
+            <Link to="/maintenance" className="hover:text-[#008C7A] lg:mx-2">
+              Privacy Policy
+            </Link>
           </div>
         </div>
       </div>

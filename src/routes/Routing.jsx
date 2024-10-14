@@ -9,6 +9,8 @@ import Layout from "../header/Layout";
 
 // component
 import Error404 from "../components/status/Error404";
+import AboutUsPage from "../pages/subpages/AboutUsPage";
+import Maintenance from "../components/status/UnderConstruction";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,8 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <MainPage /> },
+      { path: "/aboutus", element: <AboutUsPage /> },
+      { path: "/maintenance", element: <Maintenance /> },
       { path: "*", element: <Error404 /> },
     ],
   },

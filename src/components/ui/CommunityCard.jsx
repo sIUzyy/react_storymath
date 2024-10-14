@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 
 // icons
-import { RxAvatar } from "react-icons/rx";
+// import { RxAvatar } from "react-icons/rx";
 
 // component
 import RateIcons from "./RateIcons";
 
-export default function CommunityCard({ message, name, occupation }) {
+export default function CommunityCard({ message, name, occupation, src }) {
   return (
     <div className="bg-[#303030] text-white rounded-sm p-5 my-2">
       <RateIcons />
@@ -17,7 +17,12 @@ export default function CommunityCard({ message, name, occupation }) {
 
       <div className="profile flex items-center">
         <div>
-          <RxAvatar size={40} color="white" />
+          <img
+            src={src}
+            alt="avatar"
+            className="w-[40px] h-[40px] rounded-full object-cover "
+          />
+          {/* <RxAvatar size={40} color="white" /> */}
         </div>
 
         <div className="ml-2">
@@ -33,4 +38,5 @@ CommunityCard.propTypes = {
   message: PropTypes.string,
   name: PropTypes.string,
   occupation: PropTypes.string,
+  src: PropTypes.any,
 };

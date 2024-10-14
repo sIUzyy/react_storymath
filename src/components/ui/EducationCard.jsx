@@ -18,7 +18,10 @@ export default function EducationCard({ imgsrc, alt, title, desc, to }) {
 
           <p className="text-[14px] mb-10 xl:text-[18px]">{desc}</p>
 
-          <Link to={to} className="text-[#008C7A] font-bold">
+          <Link
+            to={to}
+            className="text-[#008C7A] font-bold underline hover:text-black"
+          >
             Learn More...
           </Link>
         </div>
