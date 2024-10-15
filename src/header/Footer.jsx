@@ -38,8 +38,8 @@ const headers = [
     path: "/aboutus",
   },
   {
-    name: "Sustainable Practices",
-    path: "/maintenance",
+    name: "Tier",
+    path: "/tier",
   },
   {
     name: "Technology Integration",

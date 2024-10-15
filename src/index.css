@@ -5,6 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/*remove whitespace*/
 html,
 body {
   width: 100%;

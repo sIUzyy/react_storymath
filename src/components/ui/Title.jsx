@@ -4,7 +4,7 @@ export default function Title({ children, style }) {
   return (
     <h1
       style={style}
-      className="text-[24px] mb-[16px] font-bold xl:text-[34px]"
+      className="text-[24px] mb-[16px] font-extrabold xl:text-[34px]"
     >
       {children}
     </h1>

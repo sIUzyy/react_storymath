@@ -1,71 +1,51 @@
 import Title from "../../components/ui/Title";
 
-import { IoIosPeople, IoIosLeaf } from "react-icons/io";
-import { FaMessage } from "react-icons/fa6";
+import About from "../../assets/hero_pic.webp";
 
 export default function AboutUsPage() {
   return (
-    <div className="mv_container mt-32 px-4 text-left mx-auto  lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
-      <div>
-        <Title style={{ textAlign: "center" }}>About StoryMath</Title>
-        <p className="text-[14px] mb-10 text-center lg:text-[16px] ">
-          Discover how we are transforming education through sustainable
-          practices, advanced technology, and community engagement.
-        </p>
+    <div className="mv_container my-32 px-4 text-left mx-auto  lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
+      <div className="sub_container lg:flex  lg:items-center ">
+        <div className="image lg:order-2 lg:w-2/4">
+          <img src={About} alt="about-storymath" />
+        </div>
 
-        <Title style={{ textAlign: "center" }}>
-          Our Commitment to Education
-        </Title>
-        <p className="text-[14px] mb-10 text-center lg:text-[16px]">
-          At StoryMath, we strive to enhance literacy and numeracy among
-          children in underserved communities. Our mission integrates
-          sustainable practices and advanced technology to create engaging
-          educational experiences.
-        </p>
+        <div className="text_container mt-10 lg:w-2/4 lg:pr-5">
+          <div className="header ">
+            <Title style={{ width: "100px" }}>About StoryMath</Title>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 ">
-          <div className="mb-10 md:p-3 xl:p-5">
-            <IoIosPeople
-              style={{ marginBottom: 5 }}
-              size={30}
-              color={"#008C7A"}
-            />
-            <Title>Inclusivity</Title>
-            <p className="text-[14px] lg:text-[16px]">
-              We believe every child deserves access to quality education,
-              regardless of their background. Our programs are designed to be
-              inclusive and cater to diverse learning needs.
+            <p className="text-[14px] my-5 xl:text-[18px]">
+              StoryMath is an innovative educational initiative dedicated to
+              transforming the way students learn by integrating sustainability,
+              cutting-edge technology, and strong community collaboration. Our
+              mission is to enhance literacy and numeracy skills among children,
+              empowering them with the tools they need to thrive in an
+              ever-changing world.
             </p>
-          </div>
 
-          <div className="mb-10 md:p-3 xl:p-5">
-            <IoIosLeaf
-              style={{ marginBottom: 5 }}
-              size={25}
-              color={"#008C7A"}
-            />
-
-            <Title>Sustainability</Title>
-            <p className="text-[14px] lg:text-[16px]">
-              We are committed to environmentally friendly practices in our
-              operations, ensuring that our educational initiatives not only
-              benefit children but also protect our planet for future
-              generations.
+            <p className="text-[14px] my-5 xl:text-[18px]">
+              We believe that education goes beyond textbooks; it requires a
+              holistic approach that addresses the unique needs of each
+              community. That’s why we’ve developed a multi-tier program that
+              works closely with educators, parents, local governments, and
+              experts in technology and sustainable development. Together, we
+              co-create culturally relevant learning materials and adaptive
+              platforms that engage students while promoting environmental
+              consciousness.
             </p>
-          </div>
 
-          <div className="mb-10 md:p-3 xl:p-5">
-            <FaMessage
-              style={{ marginBottom: 5 }}
-              size={20}
-              color={"#008C7A"}
-            />
+            <p className="text-[14px] my-5 xl:text-[18px]">
+              Our commitment to inclusivity, innovation, and sustainability
+              drives every aspect of StoryMath. From eco-friendly educational
+              tools to AI-powered learning platforms, we are paving the way for
+              a new generation of learners who are not only academically
+              equipped but also empowered to make a positive impact on their
+              communities.
+            </p>
 
-            <Title>Community Engagement</Title>
-            <p className="text-[14px] lg:text-[16px]">
-              We actively involve local communities in our initiatives,
-              fostering collaboration and ensuring that our programs are
-              relevant and effective in addressing local educational challenges.
+            <p className="text-[14px] my-5 xl:text-[18px]">
+              StoryMath is more than a program — it’s a movement to redefine
+              education for a brighter, more sustainable future.
             </p>
           </div>
         </div>

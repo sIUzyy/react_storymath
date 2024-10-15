@@ -1,6 +1,5 @@
 // components
 import Button from "../components/ui/Button";
-import CommunityCard from "../components/ui/CommunityCard";
 import Title from "../components/ui/Title";
 import EducationCard from "../components/ui/EducationCard";
 
@@ -14,14 +13,6 @@ import Num from "../assets/educ_num.webp";
 import Adv from "../assets/educ_adv.webp";
 import MV from "../assets/mv_picc.jpg";
 import Hero from "../assets/hero_pic.webp";
-
-// avatar img
-import Emily from "../assets/emily.jpeg";
-import Michael from "../assets/michael.jpeg";
-import Sarah from "../assets/sarah.webp";
-import David from "../assets/david.webp";
-import Jessica from "../assets/jessica.webp";
-import Tom from "../assets/tom.webp";
 
 // navigation
 import { Link } from "react-router-dom";
@@ -89,16 +80,16 @@ export default function MainPage() {
   }, [innovativeControls, innovativeInView]);
 
   // community voice
-  const communityControls = useAnimation();
-  const { ref: communityRef, inView: communityInView } = useInView();
+  // const communityControls = useAnimation();
+  // const { ref: communityRef, inView: communityInView } = useInView();
 
-  useEffect(() => {
-    if (communityInView) {
-      communityControls.start({ x: 0, opacity: 1 });
-    } else {
-      communityControls.start({ x: -50, opacity: 0 }); // Reset position to left with opacity 0
-    }
-  }, [communityControls, communityInView]);
+  // useEffect(() => {
+  //   if (communityInView) {
+  //     communityControls.start({ x: 0, opacity: 1 });
+  //   } else {
+  //     communityControls.start({ x: -50, opacity: 0 }); // Reset position to left with opacity 0
+  //   }
+  // }, [communityControls, communityInView]);
 
   // join our mission today
   const missionControls = useAnimation();
@@ -169,31 +160,22 @@ export default function MainPage() {
           <div className="md:w-2/4 md:pl-3 xl:pl-16">
             <div className="my-3">
               <Title>Our Mission & Vision</Title>
-              <p className="text-[14px] xl:text-[18px]">
-                At StoryMath, we strive to revolutionize education by
-                integrating sustainable practices and advanced technology. Our
-                vision is to empower children in underserved communities,
-                enhancing their literacy and numeracy skills through innovative
-                and engaging methods.
+              <p className="text-[14px] xl:text-[18px] my-5">
+                To revolutionize education by integrating sustainable practices,
+                advanced technology, and community engagement, empowering
+                students to excel in literacy, numeracy, and critical thinking.
+                Through innovative approaches, StoryMath aims to create
+                accessible, inclusive, and impactful learning experiences that
+                inspire lifelong learners across diverse regions.
               </p>
-            </div>
 
-            <div className="my-5">
-              <Title>5000 students</Title>
-              <p className="text-[14px] xl:text-[18px]">
-                Since our inception in 2023, we have reached over 5,000
-                students, providing them with the tools and resources necessary
-                for academic success. Our commitment to inclusivity ensures that
-                every child has access to quality education.
-              </p>
-            </div>
-
-            <div className="my-5">
-              <Title>100 programs</Title>
-              <p className="text-[14px] xl:text-[18px]">
-                We have successfully launched 100 educational programs that
-                focus on literacy and numeracy, each designed to engage children
-                in a fun and interactive way, making learning enjoyable.
+              <p className="text-[14px] xl:text-[18px] my-5">
+                To create a future where all students, regardless of their
+                background, are equipped with the knowledge, skills, and values
+                needed to thrive in a rapidly evolving world. By fostering a
+                strong foundation in literacy, numeracy, and sustainability,
+                StoryMath envisions a global community of empowered learners who
+                contribute to a more equitable and sustainable society.
               </p>
             </div>
           </div>
@@ -350,88 +332,6 @@ export default function MainPage() {
               </div>
             </div>
           </div>
-        </div>
-      </motion.div>
-
-      {/*community voices */}
-      <motion.div
-        className="community_voices py-16 px-4 mx-auto lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl"
-        ref={communityRef}
-        initial={{ x: -50, opacity: 0 }} // Start from left (-50px off-screen) with opacity 0
-        animate={communityControls}
-        transition={{ duration: 0.6 }} // Adjust the speed of the animation
-      >
-        <div className="text-center mb-10">
-          <Title> Community Voices</Title>
-
-          <p>
-            <span className="font-bold xl:text-[18px]">
-              Hear from our community!
-            </span>
-            <span className="italic xl:text-[18px] ml-1">
-              Discover how
-              <span className="text-[#008C7A] mx-1 font-bold xl:text-[18px]">
-                StoryMath
-              </span>
-              is making a difference
-            </span>
-          </p>
-        </div>
-
-        <div className="md:grid md:grid-cols-2 md:gap-2 lg:grid-cols-3">
-          <CommunityCard
-            message={
-              "StoryMath has transformed my child's learning experience. The integration of technology and storytelling has made education fun and engaging!"
-            }
-            name={"Emily Johnson"}
-            occupation={"Parent and Volunteer"}
-            src={Emily}
-          />
-
-          <CommunityCard
-            message={
-              "As an educator, I see the positive impact StoryMath has on students' literacy and numeracy skills. It's a game-changer for our community."
-            }
-            name={"Michael Smith"}
-            occupation={"Local Teacher"}
-            src={Michael}
-          />
-
-          <CommunityCard
-            message={
-              "The workshops organized by StoryMath have brought families together and fostered a love for learning in our neighborhood."
-            }
-            name={"Sarah Lee"}
-            occupation={"Community Member"}
-            src={Sarah}
-          />
-
-          <CommunityCard
-            message={
-              "I support StoryMath because I believe in their mission. They are truly making a difference in children's education."
-            }
-            name={"David Brown"}
-            occupation={"Local Business Owner"}
-            src={David}
-          />
-
-          <CommunityCard
-            message={
-              "Thanks to StoryMath, I improved my reading skills and gained confidence. I love learning now!"
-            }
-            name={"Jessica White"}
-            occupation={"Former Student"}
-            src={Jessica}
-          />
-
-          <CommunityCard
-            message={
-              "StoryMath's commitment to education and sustainability is inspiring. They are shaping the future of our children."
-            }
-            name={"Tom Green"}
-            occupation={"Community Leader"}
-            src={Tom}
-          />
         </div>
       </motion.div>
 

@@ -37,8 +37,8 @@ const MobileNav = () => {
             <Link to="/aboutus" className="block py-2 hover:text-[#008C7A]">
               About Us
             </Link>
-            <Link to="/maintenance" className="block py-2 hover:text-[#008C7A]">
-              Sustainable Practices
+            <Link to="/tier" className="block py-2 hover:text-[#008C7A]">
+              Tier
             </Link>
             <Link to="/maintenance" className="block py-2 hover:text-[#008C7A]">
               Technology Integration
@@ -82,10 +82,10 @@ const MobileNav = () => {
               About Us
             </Link>
             <Link
-              to="/maintenance"
+              to="/tier"
               className="mr-3 hover:text-[#008C7A] xl:mr-5 focus:underline focus:text-[#008C7A] active:underline"
             >
-              Sustainable Practices
+              Tier
             </Link>
             <Link
               to="/maintenance"
